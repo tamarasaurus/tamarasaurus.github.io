@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for web/bundles/pimui/lib/slimbox2/slimbox2.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">web/bundles/pimui/lib/slimbox2</a> slimbox2.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.02% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>80/129</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.94% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>29/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.1% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>37/74</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+	Slimbox v2.04 - The ultimate lightweight Lightbox clone for jQuery
+	(c) 2007-2010 Christophe Beyls &lt;http://www.digitalia.be&gt;
+	MIT-style license.
+*/
+(function (w) {
+var E = w(window), u, f, F = -1, n, x, D, v, y, L, r, m = !window.XMLHttpRequest, s = [], l = document.documentElement, k = {}, t = new Image(), J = new Image(), H, a, g, p, I, d, G, c, A, K;w(function () {
+    w("body").append(w([H = w('&lt;div id="lbOverlay" /&gt;')[0], a = w('&lt;div id="lbCenter" /&gt;')[0], G = w('&lt;div id="lbBottomContainer" /&gt;')[0]]).css("display", "none"));g = w('&lt;div id="lbImage" /&gt;').appendTo(a).append(p = w('&lt;div style="position: relative;" /&gt;').append([I = w('&lt;a id="lbPrevLink" href="#" /&gt;').click(B)[0], d = w('&lt;a id="lbNextLink" href="#" /&gt;').click(e)[0]])[0])[0];c = w('&lt;div id="lbBottom" /&gt;').appendTo(G).append([w('&lt;a id="lbCloseLink" href="#" /&gt;').add(H).click(C)[0], A = w('&lt;div id="lbCaption" /&gt;')[0], K = w('&lt;div id="lbNumber" /&gt;')[0], w('&lt;div style="clear: both;" /&gt;')[0]])[0]
+});w.slimbox = function (O, N, M) {
+    u = w.extend({loop: false, overlayOpacity: 0.8, overlayFadeDuration: 400, resizeDuration: 400, resizeEasing: "swing", initialWidth: 250, initialHeight: 250, imageFadeDuration: 400, captionAnimationDuration: 400, counterText: "Image {x} of {y}", closeKeys: [27, 88, 67], previousKeys: [37, 80], nextKeys: [39, 78]}, M);<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof O == "string") {
+        O = [[O, N]];N = 0
+    }y = E.scrollTop() + (E.height() / 2);L = u.initialWidth;r = u.initialHeight;w(a).css({top: Math.max(0, y - (r / 2)), width: L, height: r, marginLeft: -L / 2}).show();v = m || (H.currentStyle &amp;&amp; (<span class="branch-2 cbranch-no" title="branch not covered" >H.currentStyle.position != "fixed")</span>);<span class="missing-if-branch" title="if path not taken" >I</span>if (v) {
+<span class="cstat-no" title="statement not covered" >        H.style.position = "absolute"</span>
+    }w(H).css("opacity", u.overlayOpacity).fadeIn(u.overlayFadeDuration);z();j(1);f = O;u.loop = u.loop &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >f.length &gt; 1)</span>;return b(N)
+};w.fn.slimbox = <span class="fstat-no" title="function not covered" >fu</span>nction (M, P, O) {
+<span class="cstat-no" title="statement not covered" >    P = P || <span class="fstat-no" title="function not covered" >fu</span>nction (Q) {</span>
+<span class="cstat-no" title="statement not covered" >        return [Q.href, Q.title]</span>
+    };<span class="cstat-no" title="statement not covered" >O = O || <span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
+<span class="cstat-no" title="statement not covered" >        return true</span>
+    };var N = <span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>return N.off("click").click(<span class="fstat-no" title="function not covered" >fu</span>nction () {</span>
+        var S = <span class="cstat-no" title="statement not covered" >this,</span> U = <span class="cstat-no" title="statement not covered" >0,</span> T, Q = <span class="cstat-no" title="statement not covered" >0,</span> R;<span class="cstat-no" title="statement not covered" >T = w.grep(N, <span class="fstat-no" title="function not covered" >fu</span>nction (W, V) {</span>
+<span class="cstat-no" title="statement not covered" >            return O.call(S, W, V)</span>
+        });<span class="cstat-no" title="statement not covered" >for (R = T.length; Q &lt; R; ++Q) {</span>
+<span class="cstat-no" title="statement not covered" >            if (T[Q] == S) {</span>
+<span class="cstat-no" title="statement not covered" >                U = Q</span>
+            }<span class="cstat-no" title="statement not covered" >T[Q] = P(T[Q], Q)</span>
+        }<span class="cstat-no" title="statement not covered" >return w.slimbox(T, U, M)</span>
+    })
+};function z() {
+    var N = E.scrollLeft(), M = E.width();w([a, G]).css("left", N + (M / 2));<span class="missing-if-branch" title="if path not taken" >I</span>if (v) {
+<span class="cstat-no" title="statement not covered" >        w(H).css({left: N, top: E.scrollTop(), width: M, height: E.height()})</span>
+    }
+}function j(M) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (M) {
+        w("object").add(m ? <span class="branch-0 cbranch-no" title="branch not covered" >"select" </span>: "embed").each(<span class="fstat-no" title="function not covered" >fu</span>nction (O, P) {
+<span class="cstat-no" title="statement not covered" >            s[O] = [P, P.style.visibility];<span class="cstat-no" title="statement not covered" >P</span>.style.visibility = "hidden"</span>
+        })
+    }else {
+<span class="cstat-no" title="statement not covered" >        w.each(s, <span class="fstat-no" title="function not covered" >fu</span>nction (O, P) {</span>
+<span class="cstat-no" title="statement not covered" >            P[0].style.visibility = P[1]</span>
+        });<span class="cstat-no" title="statement not covered" >s = []</span>
+    }var N = M ? "bind" : <span class="branch-1 cbranch-no" title="branch not covered" >"unbind";</span>E[N]("scroll resize", z);w(document)[N]("keydown", o)
+}function <span class="fstat-no" title="function not covered" >o(</span>O) {
+    var N = <span class="cstat-no" title="statement not covered" >O.keyCode,</span> M = <span class="cstat-no" title="statement not covered" >w.inArray;<span class="cstat-no" title="statement not covered" ></span>return (M(N, u.closeKeys) &gt;= 0) ? C() : (M(N, u.nextKeys) &gt;= 0) ? e() : (M(N, u.previousKeys) &gt;= 0) ? B() : false</span>
+}function <span class="fstat-no" title="function not covered" >B(</span>) {
+<span class="cstat-no" title="statement not covered" >    return b(x)</span>
+}function <span class="fstat-no" title="function not covered" >e(</span>) {
+<span class="cstat-no" title="statement not covered" >    return b(D)</span>
+}function b(M) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (M &gt;= 0) {
+        F = M;n = f[F][0];x = (F || (u.loop ? <span class="branch-0 cbranch-no" title="branch not covered" >f.length </span>: 0)) - 1;D = ((F + 1) % f.length) || (u.loop ? <span class="branch-0 cbranch-no" title="branch not covered" >0 </span>: -1);q();a.className = "lbLoading";k = new Image();k.onload = i;k.src = n
+    }return false
+}function i() {
+    a.className = "";
+&nbsp;
+    // https://stackoverflow.com/questions/3257059/limit-slimbox-lightbox-image-to-window-size
+    const winWidth = w(window).width() - 20;
+    const winHeight = w(window).height() - 20;
+    const maxSize = (winWidth &gt; winHeight) ? winHeight : <span class="branch-1 cbranch-no" title="branch not covered" >winWidth;</span>
+    let my_w = k.width;
+    let my_h = k.height;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (my_w &gt; my_h)
+    {
+<span class="cstat-no" title="statement not covered" >        my_h = maxSize * my_h / my_w;</span>
+<span class="cstat-no" title="statement not covered" >        my_w = maxSize;</span>
+    } else {
+        my_w = maxSize * my_w / my_h;
+        my_h = maxSize;
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (k.width &gt; my_w || k.height &gt; my_h) {
+<span class="cstat-no" title="statement not covered" >        w(g).css({backgroundImage: "url(" + n + ")", backgroundSize: my_w + "px " + my_h + "px", visibility: "hidden", display: ""});</span>
+<span class="cstat-no" title="statement not covered" >        w(p).width(my_w);</span>
+<span class="cstat-no" title="statement not covered" >        w([p, I, d]).height(my_h);</span>
+    } else {
+        w(g).css({backgroundImage: "url(" + n + ")", visibility: "hidden", display: ""});
+        w(p).width(k.width);
+        w([p, I, d]).height(k.height);
+    }
+&nbsp;
+    w(A).html(f[F][1] || "");w(K).html((((f.length &gt; 1) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >u.counterText)</span> || "").replace(/{x}/, F + 1).replace(/{y}/, f.length));<span class="missing-if-branch" title="if path not taken" >I</span>if (x &gt;= 0) {
+<span class="cstat-no" title="statement not covered" >        t.src = f[x][0]</span>
+    }<span class="missing-if-branch" title="if path not taken" >I</span>if (D &gt;= 0) {
+<span class="cstat-no" title="statement not covered" >        J.src = f[D][0]</span>
+    }L = g.offsetWidth;r = g.offsetHeight;var M = Math.max(0, y - (r / 2));<span class="missing-if-branch" title="else path not taken" >E</span>if (a.offsetHeight != r) {
+        w(a).animate({height: r, top: M}, u.resizeDuration, u.resizeEasing)
+    }<span class="missing-if-branch" title="else path not taken" >E</span>if (a.offsetWidth != L) {
+        w(a).animate({width: L, marginLeft: -L / 2}, u.resizeDuration, u.resizeEasing)
+    }w(a).queue(<span class="fstat-no" title="function not covered" >fu</span>nction () {
+<span class="cstat-no" title="statement not covered" >        w(G).css({width: L, top: M + r, marginLeft: -L / 2, visibility: "hidden", display: ""});<span class="cstat-no" title="statement not covered" >w</span>(g).css({display: "none", visibility: "", opacity: ""}).fadeIn(u.imageFadeDuration, h)</span>
+    })
+}function <span class="fstat-no" title="function not covered" >h(</span>) {
+<span class="cstat-no" title="statement not covered" >    if (x &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >        w(I).show()</span>
+    }<span class="cstat-no" title="statement not covered" >if (D &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >        w(d).show()</span>
+    }<span class="cstat-no" title="statement not covered" >w(c).css("marginTop", -c.offsetHeight).animate({marginTop: 0}, u.captionAnimationDuration);<span class="cstat-no" title="statement not covered" >G</span>.style.visibility = ""</span>
+}function q() {
+    k.onload = null;k.src = t.src = J.src = n;w([a, g, c]).stop(true);w([I, d, g, G]).hide()
+}function <span class="fstat-no" title="function not covered" >C(</span>) {
+<span class="cstat-no" title="statement not covered" >    if (F &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >        q();<span class="cstat-no" title="statement not covered" >F</span> = x = D = -1;<span class="cstat-no" title="statement not covered" >w</span>(a).hide();<span class="cstat-no" title="statement not covered" >w</span>(H).stop().fadeOut(u.overlayFadeDuration, j)</span>
+    }<span class="cstat-no" title="statement not covered" >return false</span>
+}
+})(jQuery);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 20 2019 15:38:17 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

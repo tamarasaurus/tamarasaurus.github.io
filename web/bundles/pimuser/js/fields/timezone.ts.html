@@ -1,0 +1,1470 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for web/bundles/pimuser/js/fields/timezone.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">web/bundles/pimuser/js/fields</a> timezone.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/9</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a>
+<a name='L432'></a><a href='#L432'>432</a>
+<a name='L433'></a><a href='#L433'>433</a>
+<a name='L434'></a><a href='#L434'>434</a>
+<a name='L435'></a><a href='#L435'>435</a>
+<a name='L436'></a><a href='#L436'>436</a>
+<a name='L437'></a><a href='#L437'>437</a>
+<a name='L438'></a><a href='#L438'>438</a>
+<a name='L439'></a><a href='#L439'>439</a>
+<a name='L440'></a><a href='#L440'>440</a>
+<a name='L441'></a><a href='#L441'>441</a>
+<a name='L442'></a><a href='#L442'>442</a>
+<a name='L443'></a><a href='#L443'>443</a>
+<a name='L444'></a><a href='#L444'>444</a>
+<a name='L445'></a><a href='#L445'>445</a>
+<a name='L446'></a><a href='#L446'>446</a>
+<a name='L447'></a><a href='#L447'>447</a>
+<a name='L448'></a><a href='#L448'>448</a>
+<a name='L449'></a><a href='#L449'>449</a>
+<a name='L450'></a><a href='#L450'>450</a>
+<a name='L451'></a><a href='#L451'>451</a>
+<a name='L452'></a><a href='#L452'>452</a>
+<a name='L453'></a><a href='#L453'>453</a>
+<a name='L454'></a><a href='#L454'>454</a>
+<a name='L455'></a><a href='#L455'>455</a>
+<a name='L456'></a><a href='#L456'>456</a>
+<a name='L457'></a><a href='#L457'>457</a>
+<a name='L458'></a><a href='#L458'>458</a>
+<a name='L459'></a><a href='#L459'>459</a>
+<a name='L460'></a><a href='#L460'>460</a>
+<a name='L461'></a><a href='#L461'>461</a>
+<a name='L462'></a><a href='#L462'>462</a>
+<a name='L463'></a><a href='#L463'>463</a>
+<a name='L464'></a><a href='#L464'>464</a>
+<a name='L465'></a><a href='#L465'>465</a>
+<a name='L466'></a><a href='#L466'>466</a>
+<a name='L467'></a><a href='#L467'>467</a>
+<a name='L468'></a><a href='#L468'>468</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const BaseSelect = require('pim/form/common/fields/select');
+&nbsp;
+class TimezoneField extends BaseSelect {
+  /**
+   * {@inheritdoc}
+   */
+  configure() {
+    BaseSelect.prototype.configure.apply(this, arguments);
+    this.config.choices = {
+      'Africa': {
+        'Africa/Abidjan': 'Abidjan GMT (UTC+00:00)',
+        'Africa/Accra': 'Accra GMT (UTC+00:00)',
+        'Africa/Addis_Ababa': 'Addis Ababa EAT (UTC+03:00)',
+        'Africa/Algiers': 'Algiers CET (UTC+01:00)',
+        'Africa/Asmara': 'Asmara EAT (UTC+03:00)',
+        'Africa/Bamako': 'Bamako GMT (UTC+00:00)',
+        'Africa/Bangui': 'Bangui WAT (UTC+01:00)',
+        'Africa/Banjul': 'Banjul GMT (UTC+00:00)',
+        'Africa/Bissau': 'Bissau GMT (UTC+00:00)',
+        'Africa/Blantyre': 'Blantyre CAT (UTC+02:00)',
+        'Africa/Brazzaville': 'Brazzaville WAT (UTC+01:00)',
+        'Africa/Bujumbura': 'Bujumbura CAT (UTC+02:00)',
+        'Africa/Cairo': 'Cairo EET (UTC+02:00)',
+        'Africa/Casablanca': 'Casablanca WEST (UTC+01:00)',
+        'Africa/Ceuta': 'Ceuta CEST (UTC+02:00)',
+        'Africa/Conakry': 'Conakry GMT (UTC+00:00)',
+        'Africa/Dakar': 'Dakar GMT (UTC+00:00)',
+        'Africa/Dar_es_Salaam': 'Dar es Salaam EAT (UTC+03:00)',
+        'Africa/Djibouti': 'Djibouti EAT (UTC+03:00)',
+        'Africa/Douala': 'Douala WAT (UTC+01:00)',
+        'Africa/El_Aaiun': 'El Aaiun WEST (UTC+01:00)',
+        'Africa/Freetown': 'Freetown GMT (UTC+00:00)',
+        'Africa/Gaborone': 'Gaborone CAT (UTC+02:00)',
+        'Africa/Harare': 'Harare CAT (UTC+02:00)',
+        'Africa/Johannesburg': 'Johannesburg SAST (UTC+02:00)',
+        'Africa/Juba': 'Juba EAT (UTC+03:00)',
+        'Africa/Kampala': 'Kampala EAT (UTC+03:00)',
+        'Africa/Khartoum': 'Khartoum EAT (UTC+03:00)',
+        'Africa/Kigali': 'Kigali CAT (UTC+02:00)',
+        'Africa/Kinshasa': 'Kinshasa WAT (UTC+01:00)',
+        'Africa/Lagos': 'Lagos WAT (UTC+01:00)',
+        'Africa/Libreville': 'Libreville WAT (UTC+01:00)',
+        'Africa/Lome': 'Lome GMT (UTC+00:00)',
+        'Africa/Luanda': 'Luanda WAT (UTC+01:00)',
+        'Africa/Lubumbashi': 'Lubumbashi CAT (UTC+02:00)',
+        'Africa/Lusaka': 'Lusaka CAT (UTC+02:00)',
+        'Africa/Malabo': 'Malabo WAT (UTC+01:00)',
+        'Africa/Maputo': 'Maputo CAT (UTC+02:00)',
+        'Africa/Maseru': 'Maseru SAST (UTC+02:00)',
+        'Africa/Mbabane': 'Mbabane SAST (UTC+02:00)',
+        'Africa/Mogadishu': 'Mogadishu EAT (UTC+03:00)',
+        'Africa/Monrovia': 'Monrovia GMT (UTC+00:00)',
+        'Africa/Nairobi': 'Nairobi EAT (UTC+03:00)',
+        'Africa/Ndjamena': 'Ndjamena WAT (UTC+01:00)',
+        'Africa/Niamey': 'Niamey WAT (UTC+01:00)',
+        'Africa/Nouakchott': 'Nouakchott GMT (UTC+00:00)',
+        'Africa/Ouagadougou': 'Ouagadougou GMT (UTC+00:00)',
+        'Africa/Porto-Novo': 'Porto-Novo WAT (UTC+01:00)',
+        'Africa/Sao_Tome': 'Sao Tome GMT (UTC+00:00)',
+        'Africa/Tripoli': 'Tripoli EET (UTC+02:00)',
+        'Africa/Tunis': 'Tunis CET (UTC+01:00)',
+        'Africa/Windhoek': 'Windhoek WAT (UTC+01:00)'
+      },
+      'America': {
+        'America/Adak': 'Adak HDT (UTC-09:00)',
+        'America/Anchorage': 'Anchorage AKDT (UTC-08:00)',
+        'America/Anguilla': 'Anguilla AST (UTC-04:00)',
+        'America/Antigua': 'Antigua AST (UTC-04:00)',
+        'America/Araguaina': 'Araguaina BRT (UTC-03:00)',
+        'America/Argentina/Buenos_Aires': 'Argentina - Buenos Aires ART (UTC-03:00)',
+        'America/Argentina/Catamarca': 'Argentina - Catamarca ART (UTC-03:00)',
+        'America/Argentina/Cordoba': 'Argentina - Cordoba ART (UTC-03:00)',
+        'America/Argentina/Jujuy': 'Argentina - Jujuy ART (UTC-03:00)',
+        'America/Argentina/La_Rioja': 'Argentina - La Rioja ART (UTC-03:00)',
+        'America/Argentina/Mendoza': 'Argentina - Mendoza ART (UTC-03:00)',
+        'America/Argentina/Rio_Gallegos': 'Argentina - Rio Gallegos ART (UTC-03:00)',
+        'America/Argentina/Salta': 'Argentina - Salta ART (UTC-03:00)',
+        'America/Argentina/San_Juan': 'Argentina - San Juan ART (UTC-03:00)',
+        'America/Argentina/San_Luis': 'Argentina - San Luis ART (UTC-03:00)',
+        'America/Argentina/Tucuman': 'Argentina - Tucuman ART (UTC-03:00)',
+        'America/Argentina/Ushuaia': 'Argentina - Ushuaia ART (UTC-03:00)',
+        'America/Aruba': 'Aruba AST (UTC-04:00)',
+        'America/Asuncion': 'Asuncion PYT (UTC-04:00)',
+        'America/Atikokan': 'Atikokan EST (UTC-05:00)',
+        'America/Bahia': 'Bahia BRT (UTC-03:00)',
+        'America/Bahia_Banderas': 'Bahia Banderas CDT (UTC-05:00)',
+        'America/Barbados': 'Barbados AST (UTC-04:00)',
+        'America/Belem': 'Belem BRT (UTC-03:00)',
+        'America/Belize': 'Belize CST (UTC-06:00)',
+        'America/Blanc-Sablon': 'Blanc-Sablon AST (UTC-04:00)',
+        'America/Boa_Vista': 'Boa Vista AMT (UTC-04:00)',
+        'America/Bogota': 'Bogota COT (UTC-05:00)',
+        'America/Boise': 'Boise MDT (UTC-06:00)',
+        'America/Cambridge_Bay': 'Cambridge Bay MDT (UTC-06:00)',
+        'America/Campo_Grande': 'Campo Grande AMT (UTC-04:00)',
+        'America/Cancun': 'Cancun EST (UTC-05:00)',
+        'America/Caracas': 'Caracas VET (UTC-04:00)',
+        'America/Cayenne': 'Cayenne GFT (UTC-03:00)',
+        'America/Cayman': 'Cayman EST (UTC-05:00)',
+        'America/Chicago': 'Chicago CDT (UTC-05:00)',
+        'America/Chihuahua': 'Chihuahua MDT (UTC-06:00)',
+        'America/Costa_Rica': 'Costa Rica CST (UTC-06:00)',
+        'America/Creston': 'Creston MST (UTC-07:00)',
+        'America/Cuiaba': 'Cuiaba AMT (UTC-04:00)',
+        'America/Curacao': 'Curacao AST (UTC-04:00)',
+        'America/Danmarkshavn': 'Danmarkshavn GMT (UTC+00:00)',
+        'America/Dawson': 'Dawson PDT (UTC-07:00)',
+        'America/Dawson_Creek': 'Dawson Creek MST (UTC-07:00)',
+        'America/Denver': 'Denver MDT (UTC-06:00)',
+        'America/Detroit': 'Detroit EDT (UTC-04:00)',
+        'America/Dominica': 'Dominica AST (UTC-04:00)',
+        'America/Edmonton': 'Edmonton MDT (UTC-06:00)',
+        'America/Eirunepe': 'Eirunepe ACT (UTC-05:00)',
+        'America/El_Salvador': 'El Salvador CST (UTC-06:00)',
+        'America/Fort_Nelson': 'Fort Nelson MST (UTC-07:00)',
+        'America/Fortaleza': 'Fortaleza BRT (UTC-03:00)',
+        'America/Glace_Bay': 'Glace Bay ADT (UTC-03:00)',
+        'America/Godthab': 'Godthab WGST (UTC-02:00)',
+        'America/Goose_Bay': 'Goose Bay ADT (UTC-03:00)',
+        'America/Grand_Turk': 'Grand Turk AST (UTC-04:00)',
+        'America/Grenada': 'Grenada AST (UTC-04:00)',
+        'America/Guadeloupe': 'Guadeloupe AST (UTC-04:00)',
+        'America/Guatemala': 'Guatemala CST (UTC-06:00)',
+        'America/Guayaquil': 'Guayaquil ECT (UTC-05:00)',
+        'America/Guyana': 'Guyana GYT (UTC-04:00)',
+        'America/Halifax': 'Halifax ADT (UTC-03:00)',
+        'America/Havana': 'Havana CDT (UTC-04:00)',
+        'America/Hermosillo': 'Hermosillo MST (UTC-07:00)',
+        'America/Indiana/Indianapolis': 'Indiana - Indianapolis EDT (UTC-04:00)',
+        'America/Indiana/Knox': 'Indiana - Knox CDT (UTC-05:00)',
+        'America/Indiana/Marengo': 'Indiana - Marengo EDT (UTC-04:00)',
+        'America/Indiana/Petersburg': 'Indiana - Petersburg EDT (UTC-04:00)',
+        'America/Indiana/Tell_City': 'Indiana - Tell City CDT (UTC-05:00)',
+        'America/Indiana/Vevay': 'Indiana - Vevay EDT (UTC-04:00)',
+        'America/Indiana/Vincennes': 'Indiana - Vincennes EDT (UTC-04:00)',
+        'America/Indiana/Winamac': 'Indiana - Winamac EDT (UTC-04:00)',
+        'America/Inuvik': 'Inuvik MDT (UTC-06:00)',
+        'America/Iqaluit': 'Iqaluit EDT (UTC-04:00)',
+        'America/Jamaica': 'Jamaica EST (UTC-05:00)',
+        'America/Juneau': 'Juneau AKDT (UTC-08:00)',
+        'America/Kentucky/Louisville': 'Kentucky - Louisville EDT (UTC-04:00)',
+        'America/Kentucky/Monticello': 'Kentucky - Monticello EDT (UTC-04:00)',
+        'America/Kralendijk': 'Kralendijk AST (UTC-04:00)',
+        'America/La_Paz': 'La Paz BOT (UTC-04:00)',
+        'America/Lima': 'Lima PET (UTC-05:00)',
+        'America/Los_Angeles': 'Los Angeles PDT (UTC-07:00)',
+        'America/Lower_Princes': 'Lower Princes AST (UTC-04:00)',
+        'America/Maceio': 'Maceio BRT (UTC-03:00)',
+        'America/Managua': 'Managua CST (UTC-06:00)',
+        'America/Manaus': 'Manaus AMT (UTC-04:00)',
+        'America/Marigot': 'Marigot AST (UTC-04:00)',
+        'America/Martinique': 'Martinique AST (UTC-04:00)',
+        'America/Matamoros': 'Matamoros CDT (UTC-05:00)',
+        'America/Mazatlan': 'Mazatlan MDT (UTC-06:00)',
+        'America/Menominee': 'Menominee CDT (UTC-05:00)',
+        'America/Merida': 'Merida CDT (UTC-05:00)',
+        'America/Metlakatla': 'Metlakatla AKDT (UTC-08:00)',
+        'America/Mexico_City': 'Mexico City CDT (UTC-05:00)',
+        'America/Miquelon': 'Miquelon PMDT (UTC-02:00)',
+        'America/Moncton': 'Moncton ADT (UTC-03:00)',
+        'America/Monterrey': 'Monterrey CDT (UTC-05:00)',
+        'America/Montevideo': 'Montevideo UYT (UTC-03:00)',
+        'America/Montserrat': 'Montserrat AST (UTC-04:00)',
+        'America/Nassau': 'Nassau EDT (UTC-04:00)',
+        'America/New_York': 'New York EDT (UTC-04:00)',
+        'America/Nipigon': 'Nipigon EDT (UTC-04:00)',
+        'America/Nome': 'Nome AKDT (UTC-08:00)',
+        'America/Noronha': 'Noronha FNT (UTC-02:00)',
+        'America/North_Dakota/Beulah': 'North Dakota - Beulah CDT (UTC-05:00)',
+        'America/North_Dakota/Center': 'North Dakota - Center CDT (UTC-05:00)',
+        'America/North_Dakota/New_Salem': 'North Dakota - New Salem CDT (UTC-05:00)',
+        'America/Ojinaga': 'Ojinaga MDT (UTC-06:00)',
+        'America/Panama': 'Panama EST (UTC-05:00)',
+        'America/Pangnirtung': 'Pangnirtung EDT (UTC-04:00)',
+        'America/Paramaribo': 'Paramaribo SRT (UTC-03:00)',
+        'America/Phoenix': 'Phoenix MST (UTC-07:00)',
+        'America/Port-au-Prince': 'Port-au-Prince EST (UTC-05:00)',
+        'America/Port_of_Spain': 'Port of Spain AST (UTC-04:00)',
+        'America/Porto_Velho': 'Porto Velho AMT (UTC-04:00)',
+        'America/Puerto_Rico': 'Puerto Rico AST (UTC-04:00)',
+        'America/Rainy_River': 'Rainy River CDT (UTC-05:00)',
+        'America/Rankin_Inlet': 'Rankin Inlet CDT (UTC-05:00)',
+        'America/Recife': 'Recife BRT (UTC-03:00)',
+        'America/Regina': 'Regina CST (UTC-06:00)',
+        'America/Resolute': 'Resolute CDT (UTC-05:00)',
+        'America/Rio_Branco': 'Rio Branco ACT (UTC-05:00)',
+        'America/Santarem': 'Santarem BRT (UTC-03:00)',
+        'America/Santiago': 'Santiago CLT (UTC-04:00)',
+        'America/Santo_Domingo': 'Santo Domingo AST (UTC-04:00)',
+        'America/Sao_Paulo': 'Sao Paulo BRT (UTC-03:00)',
+        'America/Scoresbysund': 'Scoresbysund EGST (UTC+00:00)',
+        'America/Sitka': 'Sitka AKDT (UTC-08:00)',
+        'America/St_Barthelemy': 'St Barthelemy AST (UTC-04:00)',
+        'America/St_Johns': 'St Johns NDT (UTC-02:30)',
+        'America/St_Kitts': 'St Kitts AST (UTC-04:00)',
+        'America/St_Lucia': 'St Lucia AST (UTC-04:00)',
+        'America/St_Thomas': 'St Thomas AST (UTC-04:00)',
+        'America/St_Vincent': 'St Vincent AST (UTC-04:00)',
+        'America/Swift_Current': 'Swift Current CST (UTC-06:00)',
+        'America/Tegucigalpa': 'Tegucigalpa CST (UTC-06:00)',
+        'America/Thule': 'Thule ADT (UTC-03:00)',
+        'America/Thunder_Bay': 'Thunder Bay EDT (UTC-04:00)',
+        'America/Tijuana': 'Tijuana PDT (UTC-07:00)',
+        'America/Toronto': 'Toronto EDT (UTC-04:00)',
+        'America/Tortola': 'Tortola AST (UTC-04:00)',
+        'America/Vancouver': 'Vancouver PDT (UTC-07:00)',
+        'America/Whitehorse': 'Whitehorse PDT (UTC-07:00)',
+        'America/Winnipeg': 'Winnipeg CDT (UTC-05:00)',
+        'America/Yakutat': 'Yakutat AKDT (UTC-08:00)',
+        'America/Yellowknife': 'Yellowknife MDT (UTC-06:00)',
+      },
+      'Antarctica': {
+        'Antarctica/Casey': 'Casey AWST (UTC+08:00)',
+        'Antarctica/Davis': 'Davis DAVT (UTC+07:00)',
+        'Antarctica/DumontDUrville': 'DumontDUrville DDUT (UTC+10:00)',
+        'Antarctica/Macquarie': 'Macquarie MIST (UTC+11:00)',
+        'Antarctica/Mawson': 'Mawson MAWT (UTC+05:00)',
+        'Antarctica/McMurdo': 'McMurdo NZST (UTC+12:00)',
+        'Antarctica/Palmer': 'Palmer CLT (UTC-04:00)',
+        'Antarctica/Rothera': 'Rothera ROTT (UTC-03:00)',
+        'Antarctica/Syowa': 'Syowa SYOT (UTC+03:00)',
+        'Antarctica/Troll': 'Troll CEST (UTC+02:00)',
+        'Antarctica/Vostok': 'Vostok VOST (UTC+06:00)'
+      },
+      'Arctic': {
+        'Arctic/Longyearbyen': 'Longyearbyen CEST (UTC+02:00)'
+      },
+      'Asia': {
+        'Asia/Aden': 'Aden AST (UTC+03:00)',
+        'Asia/Almaty': 'Almaty +06 (UTC+06:00)',
+        'Asia/Amman': 'Amman EEST (UTC+03:00)',
+        'Asia/Anadyr': 'Anadyr ANAT (UTC+12:00)',
+        'Asia/Aqtau': 'Aqtau +05 (UTC+05:00)',
+        'Asia/Aqtobe': 'Aqtobe +05 (UTC+05:00)',
+        'Asia/Ashgabat': 'Ashgabat TMT (UTC+05:00)',
+        'Asia/Baghdad': 'Baghdad AST (UTC+03:00)',
+        'Asia/Bahrain': 'Bahrain AST (UTC+03:00)',
+        'Asia/Baku': 'Baku AZT (UTC+04:00)',
+        'Asia/Bangkok': 'Bangkok ICT (UTC+07:00)',
+        'Asia/Barnaul': 'Barnaul +07 (UTC+07:00)',
+        'Asia/Beirut': 'Beirut EEST (UTC+03:00)',
+        'Asia/Bishkek': 'Bishkek KGT (UTC+06:00)',
+        'Asia/Brunei': 'Brunei BNT (UTC+08:00)',
+        'Asia/Chita': 'Chita YAKT (UTC+09:00)',
+        'Asia/Choibalsan': 'Choibalsan CHOST (UTC+09:00)',
+        'Asia/Colombo': 'Colombo IST (UTC+05:30)',
+        'Asia/Damascus': 'Damascus EEST (UTC+03:00)',
+        'Asia/Dhaka': 'Dhaka BDT (UTC+06:00)',
+        'Asia/Dili': 'Dili TLT (UTC+09:00)',
+        'Asia/Dubai': 'Dubai GST (UTC+04:00)',
+        'Asia/Dushanbe': 'Dushanbe TJT (UTC+05:00)',
+        'Asia/Gaza': 'Gaza EEST (UTC+03:00)',
+        'Asia/Hebron': 'Hebron EEST (UTC+03:00)',
+        'Asia/Ho_Chi_Minh': 'Ho Chi Minh ICT (UTC+07:00)',
+        'Asia/Hong_Kong': 'Hong Kong HKT (UTC+08:00)',
+        'Asia/Hovd': 'Hovd HOVST (UTC+08:00)',
+        'Asia/Irkutsk': 'Irkutsk IRKT (UTC+08:00)',
+        'Asia/Jakarta': 'Jakarta WIB (UTC+07:00)',
+        'Asia/Jayapura': 'Jayapura WIT (UTC+09:00)',
+        'Asia/Jerusalem': 'Jerusalem IDT (UTC+03:00)',
+        'Asia/Kabul': 'Kabul AFT (UTC+04:30)',
+        'Asia/Kamchatka': 'Kamchatka PETT (UTC+12:00)',
+        'Asia/Karachi': 'Karachi PKT (UTC+05:00)',
+        'Asia/Kathmandu': 'Kathmandu NPT (UTC+05:45)',
+        'Asia/Khandyga': 'Khandyga YAKT (UTC+09:00)',
+        'Asia/Kolkata': 'Kolkata IST (UTC+05:30)',
+        'Asia/Krasnoyarsk': 'Krasnoyarsk KRAT (UTC+07:00)',
+        'Asia/Kuala_Lumpur': 'Kuala Lumpur MYT (UTC+08:00)',
+        'Asia/Kuching': 'Kuching MYT (UTC+08:00)',
+        'Asia/Kuwait': 'Kuwait AST (UTC+03:00)',
+        'Asia/Macau': 'Macau CST (UTC+08:00)',
+        'Asia/Magadan': 'Magadan MAGT (UTC+11:00)',
+        'Asia/Makassar': 'Makassar WITA (UTC+08:00)',
+        'Asia/Manila': 'Manila PHT (UTC+08:00)',
+        'Asia/Muscat': 'Muscat GST (UTC+04:00)',
+        'Asia/Nicosia': 'Nicosia EEST (UTC+03:00)',
+        'Asia/Novokuznetsk': 'Novokuznetsk KRAT (UTC+07:00)',
+        'Asia/Novosibirsk': 'Novosibirsk NOVT (UTC+06:00)',
+        'Asia/Omsk': 'Omsk OMST (UTC+06:00)',
+        'Asia/Oral': 'Oral +05 (UTC+05:00)',
+        'Asia/Phnom_Penh': 'Phnom Penh ICT (UTC+07:00)',
+        'Asia/Pontianak': 'Pontianak WIB (UTC+07:00)',
+        'Asia/Pyongyang': 'Pyongyang KST (UTC+08:30)',
+        'Asia/Qatar': 'Qatar AST (UTC+03:00)',
+        'Asia/Qyzylorda': 'Qyzylorda +06 (UTC+06:00)',
+        'Asia/Rangoon': 'Rangoon MMT (UTC+06:30)',
+        'Asia/Riyadh': 'Riyadh AST (UTC+03:00)',
+        'Asia/Sakhalin': 'Sakhalin SAKT (UTC+11:00)',
+        'Asia/Samarkand': 'Samarkand UZT (UTC+05:00)',
+        'Asia/Seoul': 'Seoul KST (UTC+09:00)',
+        'Asia/Shanghai': 'Shanghai CST (UTC+08:00)',
+        'Asia/Singapore': 'Singapore SGT (UTC+08:00)',
+        'Asia/Srednekolymsk': 'Srednekolymsk SRET (UTC+11:00)',
+        'Asia/Taipei': 'Taipei CST (UTC+08:00)',
+        'Asia/Tashkent': 'Tashkent UZT (UTC+05:00)',
+        'Asia/Tbilisi': 'Tbilisi GET (UTC+04:00)',
+        'Asia/Tehran': 'Tehran IRDT (UTC+04:30)',
+        'Asia/Thimphu': 'Thimphu BTT (UTC+06:00)',
+        'Asia/Tokyo': 'Tokyo JST (UTC+09:00)',
+        'Asia/Tomsk': 'Tomsk +07 (UTC+07:00)',
+        'Asia/Ulaanbaatar': 'Ulaanbaatar ULAST (UTC+09:00)',
+        'Asia/Urumqi': 'Urumqi XJT (UTC+06:00)',
+        'Asia/Ust-Nera': 'Ust-Nera VLAT (UTC+10:00)',
+        'Asia/Vientiane': 'Vientiane ICT (UTC+07:00)',
+        'Asia/Vladivostok': 'Vladivostok VLAT (UTC+10:00)',
+        'Asia/Yakutsk': 'Yakutsk YAKT (UTC+09:00)',
+        'Asia/Yekaterinburg': 'Yekaterinburg YEKT (UTC+05:00)',
+        'Asia/Yerevan': 'Yerevan AMT (UTC+04:00)'
+      },
+      'Atlantic': {
+        'Atlantic/Azores': 'Azores AZOST (UTC+00:00)',
+        'Atlantic/Bermuda': 'Bermuda ADT (UTC-03:00)',
+        'Atlantic/Canary': 'Canary WEST (UTC+01:00)',
+        'Atlantic/Cape_Verde': 'Cape Verde CVT (UTC-01:00)',
+        'Atlantic/Faroe': 'Faroe WEST (UTC+01:00)',
+        'Atlantic/Madeira': 'Madeira WEST (UTC+01:00)',
+        'Atlantic/Reykjavik': 'Reykjavik GMT (UTC+00:00)',
+        'Atlantic/South_Georgia': 'South Georgia GST (UTC-02:00)',
+        'Atlantic/St_Helena': 'St Helena GMT (UTC+00:00)',
+        'Atlantic/Stanley': 'Stanley FKST (UTC-03:00)'
+      },
+      'Australia': {
+        'Australia/Adelaide': 'Adelaide ACST (UTC+09:30)',
+        'Australia/Brisbane': 'Brisbane AEST (UTC+10:00)',
+        'Australia/Broken_Hill': 'Broken Hill ACST (UTC+09:30)',
+        'Australia/Currie': 'Currie AEST (UTC+10:00)',
+        'Australia/Darwin': 'Darwin ACST (UTC+09:30)',
+        'Australia/Eucla': 'Eucla ACWST (UTC+08:45)',
+        'Australia/Hobart': 'Hobart AEST (UTC+10:00)',
+        'Australia/Lindeman': 'Lindeman AEST (UTC+10:00)',
+        'Australia/Lord_Howe': 'Lord Howe LHST (UTC+10:30)',
+        'Australia/Melbourne': 'Melbourne AEST (UTC+10:00)',
+        'Australia/Perth': 'Perth AWST (UTC+08:00)',
+        'Australia/Sydney': 'Sydney AEST (UTC+10:00)'
+      },
+      'Europe': {
+        'Europe/Amsterdam': 'Amsterdam CEST (UTC+02:00)',
+        'Europe/Andorra': 'Andorra CEST (UTC+02:00)',
+        'Europe/Astrakhan': 'Astrakhan +04 (UTC+04:00)',
+        'Europe/Athens': 'Athens EEST (UTC+03:00)',
+        'Europe/Belgrade': 'Belgrade CEST (UTC+02:00)',
+        'Europe/Berlin': 'Berlin CEST (UTC+02:00)',
+        'Europe/Bratislava': 'Bratislava CEST (UTC+02:00)',
+        'Europe/Brussels': 'Brussels CEST (UTC+02:00)',
+        'Europe/Bucharest': 'Bucharest EEST (UTC+03:00)',
+        'Europe/Budapest': 'Budapest CEST (UTC+02:00)',
+        'Europe/Busingen': 'Busingen CEST (UTC+02:00)',
+        'Europe/Chisinau': 'Chisinau EEST (UTC+03:00)',
+        'Europe/Copenhagen': 'Copenhagen CEST (UTC+02:00)',
+        'Europe/Dublin': 'Dublin IST (UTC+01:00)',
+        'Europe/Gibraltar': 'Gibraltar CEST (UTC+02:00)',
+        'Europe/Guernsey': 'Guernsey BST (UTC+01:00)',
+        'Europe/Helsinki': 'Helsinki EEST (UTC+03:00)',
+        'Europe/Isle_of_Man': 'Isle of Man BST (UTC+01:00)',
+        'Europe/Istanbul': 'Istanbul EEST (UTC+03:00)',
+        'Europe/Jersey': 'Jersey BST (UTC+01:00)',
+        'Europe/Kaliningrad': 'Kaliningrad EET (UTC+02:00)',
+        'Europe/Kiev': 'Kiev EEST (UTC+03:00)',
+        'Europe/Kirov': 'Kirov +03 (UTC+03:00)',
+        'Europe/Lisbon': 'Lisbon WEST (UTC+01:00)',
+        'Europe/Ljubljana': 'Ljubljana CEST (UTC+02:00)',
+        'Europe/London': 'London BST (UTC+01:00)',
+        'Europe/Luxembourg': 'Luxembourg CEST (UTC+02:00)',
+        'Europe/Madrid': 'Madrid CEST (UTC+02:00)',
+        'Europe/Malta': 'Malta CEST (UTC+02:00)',
+        'Europe/Mariehamn': 'Mariehamn EEST (UTC+03:00)',
+        'Europe/Minsk': 'Minsk MSK (UTC+03:00)',
+        'Europe/Monaco': 'Monaco CEST (UTC+02:00)',
+        'Europe/Moscow': 'Moscow MSK (UTC+03:00)',
+        'Europe/Oslo': 'Oslo CEST (UTC+02:00)',
+        'Europe/Paris': 'Paris CEST (UTC+02:00)',
+        'Europe/Podgorica': 'Podgorica CEST (UTC+02:00)',
+        'Europe/Prague': 'Prague CEST (UTC+02:00)',
+        'Europe/Riga': 'Riga EEST (UTC+03:00)',
+        'Europe/Rome': 'Rome CEST (UTC+02:00)',
+        'Europe/Samara': 'Samara SAMT (UTC+04:00)',
+        'Europe/San_Marino': 'San Marino CEST (UTC+02:00)',
+        'Europe/Sarajevo': 'Sarajevo CEST (UTC+02:00)',
+        'Europe/Simferopol': 'Simferopol MSK (UTC+03:00)',
+        'Europe/Skopje': 'Skopje CEST (UTC+02:00)',
+        'Europe/Sofia': 'Sofia EEST (UTC+03:00)',
+        'Europe/Stockholm': 'Stockholm CEST (UTC+02:00)',
+        'Europe/Tallinn': 'Tallinn EEST (UTC+03:00)',
+        'Europe/Tirane': 'Tirane CEST (UTC+02:00)',
+        'Europe/Ulyanovsk': 'Ulyanovsk +04 (UTC+04:00)',
+        'Europe/Uzhgorod': 'Uzhgorod EEST (UTC+03:00)',
+        'Europe/Vaduz': 'Vaduz CEST (UTC+02:00)',
+        'Europe/Vatican': 'Vatican CEST (UTC+02:00)',
+        'Europe/Vienna': 'Vienna CEST (UTC+02:00)',
+        'Europe/Vilnius': 'Vilnius EEST (UTC+03:00)',
+        'Europe/Volgograd': 'Volgograd MSK (UTC+03:00)',
+        'Europe/Warsaw': 'Warsaw CEST (UTC+02:00)',
+        'Europe/Zagreb': 'Zagreb CEST (UTC+02:00)',
+        'Europe/Zaporozhye': 'Zaporozhye EEST (UTC+03:00)',
+        'Europe/Zurich': 'Zurich CEST (UTC+02:00)',
+      },
+      'Indian': {
+        'Indian/Antananarivo': 'Antananarivo EAT (UTC+03:00)',
+        'Indian/Chagos': 'Chagos IOT (UTC+06:00)',
+        'Indian/Christmas': 'Christmas CXT (UTC+07:00)',
+        'Indian/Cocos': 'Cocos CCT (UTC+06:30)',
+        'Indian/Comoro': 'Comoro EAT (UTC+03:00)',
+        'Indian/Kerguelen': 'Kerguelen TFT (UTC+05:00)',
+        'Indian/Mahe': 'Mahe SCT (UTC+04:00)',
+        'Indian/Maldives': 'Maldives MVT (UTC+05:00)',
+        'Indian/Mauritius': 'Mauritius MUT (UTC+04:00)',
+        'Indian/Mayotte': 'Mayotte EAT (UTC+03:00)',
+        'Indian/Reunion': 'Reunion RET (UTC+04:00)'
+      },
+      'Pacific': {
+        'Pacific/Apia': 'Apia WSST (UTC+13:00)',
+        'Pacific/Auckland': 'Auckland NZST (UTC+12:00)',
+        'Pacific/Bougainville': 'Bougainville BST (UTC+11:00)',
+        'Pacific/Chatham': 'Chatham CHAST (UTC+12:45)',
+        'Pacific/Chuuk': 'Chuuk CHUT (UTC+10:00)',
+        'Pacific/Easter': 'Easter EAST (UTC-06:00)',
+        'Pacific/Efate': 'Efate VUT (UTC+11:00)',
+        'Pacific/Enderbury': 'Enderbury PHOT (UTC+13:00)',
+        'Pacific/Fakaofo': 'Fakaofo TKT (UTC+13:00)',
+        'Pacific/Fiji': 'Fiji FJT (UTC+12:00)',
+        'Pacific/Funafuti': 'Funafuti TVT (UTC+12:00)',
+        'Pacific/Galapagos': 'Galapagos GALT (UTC-06:00)',
+        'Pacific/Gambier': 'Gambier GAMT (UTC-09:00)',
+        'Pacific/Guadalcanal': 'Guadalcanal SBT (UTC+11:00)',
+        'Pacific/Guam': 'Guam ChST (UTC+10:00)',
+        'Pacific/Honolulu': 'Honolulu HST (UTC-10:00)',
+        'Pacific/Johnston': 'Johnston HST (UTC-10:00)',
+        'Pacific/Kiritimati': 'Kiritimati LINT (UTC+14:00)',
+        'Pacific/Kosrae': 'Kosrae KOST (UTC+11:00)',
+        'Pacific/Kwajalein': 'Kwajalein MHT (UTC+12:00)',
+        'Pacific/Majuro': 'Majuro MHT (UTC+12:00)',
+        'Pacific/Marquesas': 'Marquesas MART (UTC-09:30)',
+        'Pacific/Midway': 'Midway SST (UTC-11:00)',
+        'Pacific/Nauru': 'Nauru NRT (UTC+12:00)',
+        'Pacific/Niue': 'Niue NUT (UTC-11:00)',
+        'Pacific/Norfolk': 'Norfolk NFT (UTC+11:00)',
+        'Pacific/Noumea': 'Noumea NCT (UTC+11:00)',
+        'Pacific/Pago_Pago': 'Pago Pago SST (UTC-11:00)',
+        'Pacific/Palau': 'Palau PWT (UTC+09:00)',
+        'Pacific/Pitcairn': 'Pitcairn PST (UTC-08:00)',
+        'Pacific/Pohnpei': 'Pohnpei PONT (UTC+11:00)',
+        'Pacific/Port_Moresby': 'Port Moresby PGT (UTC+10:00)',
+        'Pacific/Rarotonga': 'Rarotonga CKT (UTC-10:00)',
+        'Pacific/Saipan': 'Saipan ChST (UTC+10:00)',
+        'Pacific/Tahiti': 'Tahiti TAHT (UTC-10:00)',
+        'Pacific/Tarawa': 'Tarawa GILT (UTC+12:00)',
+        'Pacific/Tongatapu': 'Tongatapu TOT (UTC+13:00)',
+        'Pacific/Wake': 'Wake WAKT (UTC+12:00)',
+        'Pacific/Wallis': 'Wallis WFT (UTC+12:00)'
+      },
+      'Other': {
+        'UTC': 'UTC'
+      }
+    };
+  }
+&nbsp;
+  /**
+   * {@inheritdoc}
+   */
+  formatChoices(
+    timezones: { [key: string]: { [key: string] : string } }
+  ): { [key: string]: { [key: string] : string } } {
+    return timezones;
+  }
+}
+&nbsp;
+export = TimezoneField
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 20 2019 15:38:17 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

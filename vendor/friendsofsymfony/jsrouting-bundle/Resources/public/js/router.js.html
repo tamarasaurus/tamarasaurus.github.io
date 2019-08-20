@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">All files</a> / <a href="index.html">vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js</a> router.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.61% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>136/173</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.26% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>84/152</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>24/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/6</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">357568x</span>
+<span class="cline-any cline-yes">668000x</span>
+<span class="cline-any cline-yes">155216x</span>
+<span class="cline-any cline-yes">196837x</span>
+<span class="cline-any cline-yes">155216x</span>
+<span class="cline-any cline-yes">155216x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Portions of this code are from the Google Closure Library,
+ * received from the Closure Authors under the Apache 2.0 license.
+ *
+ * All other code is (C) FriendsOfSymfony and subject to the MIT license.
+ */
+(function() {var f,l=this;function m(a,c){var b=a.split("."),d=l;b[0]in d||!d.execScript||<span class="branch-2 cbranch-no" title="branch not covered" >d.execScript("var "+b[0]);</span>for(var e;b.length&amp;&amp;(e=b.shift());)b.length||void 0===c?d=d[e]?d[e]:d[e]={}:d[e]=c};var n=Array.prototype,p=n.forEach?function(a,c,b){n.forEach.call(a,c,b)}:<span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >fu</span>nction(a,c,b){<span class="cstat-no" title="statement not covered" >for(var d=a.length,e="string"==typeof a?a.split(""):a,g=0;g&lt;d;g++)<span class="cstat-no" title="statement not covered" >g in e&amp;&amp;c.call(b,e[g],g,a)}</span></span>;</span>function q(a){var c=0,b;for(b in a)c++;return c}function r(a){var c={},b;for(b in a)c[b]=a[b];return c};function s(a,c){this.c={};this.b=[];var b=arguments.length;<span class="missing-if-branch" title="if path not taken" >I</span>if(1&lt;b){<span class="cstat-no" title="statement not covered" >if(b%2)<span class="cstat-no" title="statement not covered" >throw Error("Uneven number of arguments");<span class="cstat-no" title="statement not covered" >f</span></span>or(var d=0;d&lt;b;d+=2)<span class="cstat-no" title="statement not covered" >this.set(arguments[d],arguments[d+1])}</span></span>else <span class="missing-if-branch" title="else path not taken" >E</span>if(a){var e;<span class="missing-if-branch" title="if path not taken" >I</span>if(a instanceof s)<span class="cstat-no" title="statement not covered" >for(u(a),d=a.b.concat(),u(a),e=[],b=0;b&lt;a.b.length;b++)<span class="cstat-no" title="statement not covered" >e.push(a.c[a.b[b]]);e</span></span>lse{var b=[],g=0;for(d in a)b[g++]=d;d=b;b=[];g=0;for(e in a)b[g++]=a[e];e=b}for(b=0;b&lt;d.length;b++)this.set(d[b],e[b])}}s.prototype.f=0;s.prototype.p=0;
+function <span class="fstat-no" title="function not covered" >u(</span>a){<span class="cstat-no" title="statement not covered" >if(a.f!=a.b.length){<span class="cstat-no" title="statement not covered" >for(var c=0,b=0;c&lt;a.b.length;){var d=<span class="cstat-no" title="statement not covered" >a.b[c];<span class="cstat-no" title="statement not covered" ></span>v(a.c,d)&amp;&amp;(a.b[b++]=d);<span class="cstat-no" title="statement not covered" >c</span>++}<span class="cstat-no" title="statement not covered" ></span>a</span>.b.length=b}<span class="cstat-no" title="statement not covered" ></span>i</span>f(a.f!=a.b.length){<span class="cstat-no" title="statement not covered" >for(var e={},b=c=0;c&lt;a.b.length;)<span class="cstat-no" title="statement not covered" >d=a.b[c],v(e,d)||(a.b[b++]=d,e[d]=1),c++;<span class="cstat-no" title="statement not covered" >a</span></span>.b.length=b}</span>}</span>s.prototype.get=function(a,c){return v(this.c,a)?this.c[a]:<span class="branch-1 cbranch-no" title="branch not covered" >c}</span>;s.prototype.set=function(a,c){v(this.c,a)||(this.f++,this.b.push(a),this.p++);this.c[a]=c};function v(a,c){return Object.prototype.hasOwnProperty.call(a,c)};var w,x,y,A;function B(){return l.navigator?l.navigator.userAgent:<span class="branch-1 cbranch-no" title="branch not covered" >null}</span>A=y=x=w=!1;var C;<span class="missing-if-branch" title="else path not taken" >E</span>if(C=B()){var D=l.navigator;w=0==C.lastIndexOf("Opera",0);x=!w&amp;&amp;(-1!=C.indexOf("MSIE")||-1!=C.indexOf("Trident"));y=!w&amp;&amp;-1!=C.indexOf("WebKit");A=!w&amp;&amp;!y&amp;&amp;!x&amp;&amp;"Gecko"==D.product}var E=x,G=A,H=y;var I;<span class="missing-if-branch" title="if path not taken" >I</span>if(w&amp;&amp;<span class="branch-1 cbranch-no" title="branch not covered" >l.opera)</span>{var J=<span class="cstat-no" title="statement not covered" >l.opera.version;<span class="cstat-no" title="statement not covered" ></span>"function"==typeof J&amp;&amp;J()}</span>else G?I=/rv\:([^\);]+)(\)|;)/:<span class="branch-1 cbranch-no" title="branch not covered" >E?I=/\b(?:MSIE|rv)\s+([^\);]+)(\)|;)/:H&amp;&amp;(I=/WebKit\/(\S+)/),</span>I&amp;&amp;I.exec(B());function K(a,c){this.a=a||{e:"",prefix:"",host:"",scheme:""};this.h(c||{})}K.g=function(){return K.j?K.j:K.j=new K};f=K.prototype;f.h=function(a){this.d=new s(a)};f.o=function(){return this.d};f.k=function(a){this.a.e=a};f.n=function(){return this.a.e};f.l=function(a){this.a.prefix=a};
+function L(a,c,b,d){var e,g=RegExp(/\[\]$/);if(b instanceof Array)p(b,function(b,e){g.test(c)?<span class="branch-0 cbranch-no" title="branch not covered" >d(c,b):</span>L(a,c+"["+("object"===typeof b?<span class="branch-0 cbranch-no" title="branch not covered" >e:</span>"")+"]",b,d)});else if("object"===typeof b)for(e in b)L(a,c+"["+e+"]",b[e],d);else d(c,b)}f.i=function(a){var c=this.a.prefix+a;<span class="missing-if-branch" title="else path not taken" >E</span>if(v(this.d.c,c))a=c;else <span class="cstat-no" title="statement not covered" >if(!v(this.d.c,a))<span class="cstat-no" title="statement not covered" >throw Error('The route "'+a+'" does not exist.');r</span></span>eturn this.d.get(a)};
+f.m=function(a,c,b){var d=this.i(a),e=c||{},g=r(e),h="",t=!0,k="";p(d.tokens,function(b){if("text"===b[0])h=b[1]+h,t=!1;else <span class="missing-if-branch" title="else path not taken" >E</span>if("variable"===b[0]){var c=b[3]in d.defaults;if(!1===t||!c||b[3]in e&amp;&amp;e[b[3]]!=d.defaults[b[3]]){<span class="missing-if-branch" title="else path not taken" >E</span>if(b[3]in e){var c=e[b[3]],k=b[3];k in g&amp;&amp;delete g[k]}else <span class="cstat-no" title="statement not covered" >if(c)<span class="cstat-no" title="statement not covered" >c=d.defaults[b[3]];e</span>lse{<span class="cstat-no" title="statement not covered" >if(t)<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span></span>hrow Error('The route "'+a+'" requires the parameter "'+b[3]+'".');}<span class="missing-if-branch" title="else path not taken" >E</span></span>i</span>f(!0!==c&amp;&amp;!1!==c&amp;&amp;""!==c||<span class="branch-3 cbranch-no" title="branch not covered" >!t)</span>k=encodeURIComponent(c).replace(/%2F/g,"/"),"null"===k&amp;&amp;null===c&amp;&amp;(<span class="branch-2 cbranch-no" title="branch not covered" >k="")</span>,h=b[1]+
+k+h;t=!1}else c&amp;&amp;(b=b[3],b in g&amp;&amp;<span class="branch-1 cbranch-no" title="branch not covered" >delete g[b])</span>}else <span class="cstat-no" title="statement not covered" >throw Error('The token type "'+b[0]+'" is not supported.');}</span>);""===h&amp;&amp;(<span class="branch-1 cbranch-no" title="branch not covered" >h="/")</span>;p(d.hosttokens,<span class="fstat-no" title="function not covered" >fu</span>nction(a){var b;<span class="cstat-no" title="statement not covered" >if("text"===a[0])<span class="cstat-no" title="statement not covered" >k=a[1]+k;e</span>lse <span class="cstat-no" title="statement not covered" >if("variable"===a[0]){<span class="cstat-no" title="statement not covered" >if(a[3]in e){<span class="cstat-no" title="statement not covered" >b=e[a[3]];v</span>ar c=<span class="cstat-no" title="statement not covered" >a[3];<span class="cstat-no" title="statement not covered" ></span>c in g&amp;&amp;delete g[c]}</span>else <span class="cstat-no" title="statement not covered" >a[3]in d.defaults&amp;&amp;(b=d.defaults[a[3]]);<span class="cstat-no" title="statement not covered" >k</span></span>=a[1]+b+k}</span>}</span></span>);h=this.a.e+h;"_scheme"in d.requirements&amp;&amp;<span class="branch-1 cbranch-no" title="branch not covered" >this.a.scheme!=d.requirements._scheme?<span class="branch-0 cbranch-no" title="branch not covered" ></span>h=d.requirements._scheme+"://"+(k||this.a.host)+h:</span>"schemes"in d&amp;&amp;"undefined"!==typeof d.schemes[0]&amp;&amp;
+<span class="branch-2 cbranch-no" title="branch not covered" >this.a.scheme!=d.schemes[0]?<span class="branch-0 cbranch-no" title="branch not covered" ></span>h=d.schemes[0]+"://"+(k||this.a.host)+h:</span>k&amp;&amp;<span class="branch-1 cbranch-no" title="branch not covered" >this.a.host!==k?<span class="branch-0 cbranch-no" title="branch not covered" ></span>h=this.a.scheme+"://"+k+h:</span>!0===b&amp;&amp;(<span class="branch-1 cbranch-no" title="branch not covered" >h=this.a.scheme+"://"+this.a.host+h)</span>;if(0&lt;q(g)){var z,F=[];c=function(a,b){b="function"===typeof b?<span class="branch-0 cbranch-no" title="branch not covered" >b():</span>b;F.push(encodeURIComponent(a)+"\x3d"+encodeURIComponent(null===b?<span class="branch-0 cbranch-no" title="branch not covered" >"":</span>b))};for(z in g)L(this,z,g[z],c);h=h+"?"+F.join("\x26").replace(/%20/g,"+")}return h};m("fos.Router",K);m("fos.Router.setData",function(a){var c=K.g();c.k(a.base_url);c.h(a.routes);"prefix"in a&amp;&amp;c.l(a.prefix);c.a.host=a.host;c.a.scheme=a.scheme});K.getInstance=K.g;K.prototype.setRoutes=K.prototype.h;K.prototype.getRoutes=K.prototype.o;K.prototype.setBaseUrl=K.prototype.k;K.prototype.getBaseUrl=K.prototype.n;K.prototype.generate=K.prototype.m;K.prototype.setPrefix=K.prototype.l;K.prototype.getRoute=K.prototype.i;window.Routing=K.g();})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 20 2019 15:38:17 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+<script src="../../../../../../block-navigation.js"></script>
+</body>
+</html>
